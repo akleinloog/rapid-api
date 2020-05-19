@@ -3,7 +3,7 @@ services:
   dev-api:
     container_name: dev-api
     build: ./docker/dev
-    volumes:
-      - ./src:/app
+#    volumes:
+#      - ./src:/app
     ports:
       - '8080:8080'
