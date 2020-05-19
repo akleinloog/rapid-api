@@ -31,13 +31,13 @@ else
 
     yarn install --force
 
-    echo "Initializing Open API"
+#    echo "Initializing Open API"
 
-    yarn run strapi install documentation
+#    yarn run strapi install documentation
 
-    echo "Initializing GraphQL"
+#    echo "Initializing GraphQL"
 
-    yarn run strapi install graphql
+#    yarn run strapi install graphql
 
     echo "Starting strapi"
 
