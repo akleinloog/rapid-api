@@ -4,4 +4,4 @@ services:
     container_name: dev
     build: ./docker/dev
     ports:
-      - '1137:1137'
+      - '1337:1337'

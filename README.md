@@ -11,11 +11,16 @@ docker-compose up --build
 
 ## Customize
 
-Login, customize as desired
+Login at http://localhost:1337/admin and create first admin account),
+Credentials:  
+admin  
+Admin123
 
-## Get Sources
+Customize settings as desired. When finished copy strapi project sources.
 
-Copy strapi project from dev container
+## Copy Sources
+
+Copy strapi project sources from dev container
 ```
 docker cp dev:/app/. ./src
 ```
