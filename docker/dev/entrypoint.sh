@@ -3,7 +3,7 @@
 # exit when any command fails
 set -e
 
-if [ -f package.json ]; then
+if [ -f yarn.lock ]; then
 
     echo "Starting existing strapi instance"
 
@@ -15,31 +15,31 @@ if [ -f package.json ]; then
 
         echo "Installing dependencies"
 
-        npm install
+        yarn install --force
 
     fi
 
-    npm run strapi develop --watch-admin
+    yarn run strapi develop --watch-admin
 
 else 
 
     echo "Initializing new strapi instance"
 
-    npx create-strapi-app . --quickstart --no-run
+    yarn create strapi-app . --quickstart --no-run
 
     echo "Installing dependencies"
 
-    npm install
+    yarn install --force
 
     echo "Initializing Open API"
 
-    npm run strapi install documentation
+    yarn run strapi install documentation
 
     echo "Initializing GraphQL"
 
-    npm run strapi install graphql
+    yarn run strapi install graphql
 
     echo "Starting strapi"
 
-    npm run strapi develop --watch-admin
+    yarn run strapi develop --watch-admin
 fi
