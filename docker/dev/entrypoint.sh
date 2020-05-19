@@ -19,7 +19,7 @@ if [ -f yarn.lock ]; then
 
     fi
 
-    yarn run strapi develop --watch-admin
+    yarn run strapi develop
 
 else 
 
@@ -41,5 +41,5 @@ else
 
     echo "Starting strapi"
 
-    yarn run strapi develop --watch-admin
+    yarn run strapi develop
 fi

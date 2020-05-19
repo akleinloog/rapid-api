@@ -4,9 +4,8 @@ RUN apk update
 RUN apk upgrade
 
 WORKDIR /app
-VOLUME /app
 
-EXPOSE 8080
+EXPOSE 1137
 
 COPY entrypoint.sh /usr/local/bin/
 

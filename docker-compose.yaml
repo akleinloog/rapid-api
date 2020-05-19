@@ -1,9 +1,7 @@
 version: '3.7'
 services:
-  dev-api:
-    container_name: dev-api
+  dev:
+    container_name: dev
     build: ./docker/dev
-#    volumes:
-#      - ./src:/app
     ports:
-      - '8080:8080'
+      - '1137:1137'
