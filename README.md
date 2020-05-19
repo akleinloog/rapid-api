@@ -15,6 +15,7 @@ Login at http://localhost:1337/admin and create first admin account),
 Credentials:  
 admin  
 Admin123
+fake@fake.com
 
 Customize settings as desired. When finished copy strapi project sources.
 
