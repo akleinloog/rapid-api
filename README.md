@@ -25,3 +25,15 @@ Copy strapi project sources from dev container
 ```
 docker cp dev:/app/. ./src
 ```
+
+## Customize Sources
+
+See strapi docs for more details.
+
+## Production Build
+
+```
+docker-compose -f docker-compose.prod.yaml up --build
+```
+
+

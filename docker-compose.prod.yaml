@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  prod:
+    container_name: prod
+    build: 
+      context: .
+      dockerfile: ./docker/prod/Dockerfile
+    ports:
+      - '1337:1337'
