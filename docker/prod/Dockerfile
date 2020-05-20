@@ -5,7 +5,7 @@ RUN apk upgrade
 
 WORKDIR /app
 
-EXPOSE 1337
+EXPOSE 8080
 
 COPY ./src/. /app
 
