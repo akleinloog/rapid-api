@@ -1,2 +1,6 @@
 # MacOS Files
 .DS_Store
+
+# Just for now
+app/
+data/

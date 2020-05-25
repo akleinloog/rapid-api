@@ -1,0 +1,42 @@
+
+###
+GET http://localhost:1337/foos
+
+
+###
+GET http://localhost:1337/bars
+
+
+###
+GET http://localhost:1337/foos/1
+
+
+###
+POST http://localhost:1337/foos
+
+{
+  "name": "Try More Foo",
+  "description": "Muhaha"
+}
+
+
+###
+POST http://localhost:1337/bars
+content-type: application/json
+
+{
+  "id" : 433,
+  "name": "How about this bar?",
+  "description": "Posted with Id"
+}
+
+
+###
+PUT http://localhost:1337/foos/5ecbd5d13128f201fee268e2
+
+{
+  "name": "Updated More",
+  "description": "Guess it wont work"
+}
+
+

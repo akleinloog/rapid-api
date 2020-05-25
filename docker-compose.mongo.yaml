@@ -1,0 +1,32 @@
+version: '3.7'
+services:
+  strapi:
+    container_name: dev
+    build: ./docker/dev
+    environment:
+      DATABASE_CLIENT: mongo
+      DATABASE_NAME: strapi
+      DATABASE_HOST: mongo
+      DATABASE_PORT: 27017
+      DATABASE_USERNAME: strapi
+      DATABASE_PASSWORD: strapi
+    links:
+      - mongo:mongo
+    volumes:
+      - ./app:/app
+    ports:
+      - '1337:1337'
+
+  mongo:
+    container_name: database
+    build: ./docker/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: strapi
+      MONGO_INITDB_ROOT_PASSWORD: strapi
+    volumes:
+      - mongodata:/data/db
+    ports:
+      - '27017:27017'
+volumes:
+  mongodata:
+    
