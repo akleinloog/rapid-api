@@ -2,8 +2,8 @@ version: '3.7'
 services:
   strapi:
     container_name: dev
-    build: ./docker/dev
+    build: ./docker/sqlite/dev
     volumes:
-      - ./src:/app
+      - ./app/sqlite:/app
     ports:
       - '1337:1337'

@@ -1,9 +1,10 @@
 version: '3.7'
 services:
   strapi:
-    container_name: dev
-    build: ./docker/mongo/dev
+    container_name: prod
+    build: ./docker/mongo/prod
     environment:
+      NODE_ENV: production
       DATABASE_CLIENT: mongo
       DATABASE_NAME: strapi
       DATABASE_HOST: mongo

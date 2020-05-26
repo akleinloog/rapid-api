@@ -2,8 +2,10 @@ version: '3.7'
 services:
   prod:
     container_name: prod
-    build: 
+    build:
       context: .
-      dockerfile: ./docker/prod/Dockerfile
+      dockerfile: ./docker/sqlite/prod/Dockerfile
+    environment:
+      NODE_ENV: production
     ports:
       - '8080:8080'
