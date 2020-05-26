@@ -2,7 +2,7 @@ version: '3.7'
 services:
   rapid-api:
     container_name: api-dev
-    build: ./docker/mongo/clean
+    build: ./docker/mongo/api
     environment:
       PORT: 8080
       DATABASE_CLIENT: mongo

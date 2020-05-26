@@ -25,3 +25,12 @@ See the strapi docs for more details.
 ## Commit changes and publish
 
 TODO
+
+
+## Tagging a new version
+
+```
+git tag -a v0.1.0 -m "Version 0.1.0"
+
+git push origin --tags
+```

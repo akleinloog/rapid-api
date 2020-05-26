@@ -2,11 +2,15 @@ FROM node:13.14.0-alpine3.11
 
 ARG VERSION
 ARG VCS_REF
+ARG PORT_NR=8080 
+
 LABEL maintainer="arnoud@kleinloog.ch" \
     description="Simple HTTP Logger" \
     version=${VERSION} \
     vcs_url="https://github.com/akleinloog/rapid-api" \
     vcs-ref=${VCS_REF}
+
+ENV PORT=$PORT
 
 RUN apk update && apk upgrade && yarn global add strapi
 
