@@ -5,7 +5,7 @@ ARG VCS_REF
 ARG PORT_NR=8080 
 
 LABEL maintainer="arnoud@kleinloog.ch" \
-    description="Simple HTTP Logger" \
+    description="Rapid API Prototyping" \
     version=${VERSION} \
     vcs_url="https://github.com/akleinloog/rapid-api" \
     vcs-ref=${VCS_REF}

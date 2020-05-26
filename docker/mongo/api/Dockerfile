@@ -3,7 +3,7 @@ FROM node:13.14.0-alpine3.11
 ARG VERSION
 ARG VCS_REF
 LABEL maintainer="arnoud@kleinloog.ch" \
-    description="Simple HTTP Logger" \
+    description="Rapid API Prototyping" \
     version=${VERSION} \
     vcs_url="https://github.com/akleinloog/rapid-api" \
     vcs-ref=${VCS_REF}
