@@ -1,24 +1,23 @@
 version: '3.7'
 services:
-  strapi:
-    container_name: dev
-    build: ./docker/mongo/dev
+  rapid-api:
+    container_name: api-dev
+    build: ./docker/mongo/clean
     environment:
+      PORT: 8080
       DATABASE_CLIENT: mongo
       DATABASE_NAME: strapi
-      DATABASE_HOST: mongo
+      DATABASE_HOST: rapid-api-db
       DATABASE_PORT: 27017
       DATABASE_USERNAME: strapi
       DATABASE_PASSWORD: strapi
     links:
-      - mongo:mongo
-    volumes:
-      - ./app/mongo:/app
+      - rapid-api-db
     ports:
-      - '1337:1337'
+      - '8080:8080'
 
-  strapi-db:
-    container_name: database
+  rapid-api-db:
+    container_name: api-db
     build: ./docker/mongo/db
     environment:
       MONGO_INITDB_ROOT_USERNAME: strapi

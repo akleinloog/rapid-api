@@ -1,9 +1,9 @@
 version: '3.7'
 services:
-  strapi:
-    container_name: dev
-    build: ./docker/sqlite/dev
-    volumes:
-      - ./app/sqlite:/app
+  rapid-api:
+    container_name: api-dev
+    build: ./docker/sqlite/clean
+    environment:
+      PORT: 8080
     ports:
-      - '1337:1337'
+      - '8080:8080'

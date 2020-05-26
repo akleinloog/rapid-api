@@ -1,18 +1,18 @@
 
 ###
-GET http://localhost:1337/foos
+GET http://localhost:8080/foos
 
 
 ###
-GET http://localhost:1337/bars
+GET http://localhost:8080/bars
 
 
 ###
-GET http://localhost:1337/foos/1
+GET http://localhost:8080/foos/1
 
 
 ###
-POST http://localhost:1337/foos
+POST http://localhost:8080/foos
 
 {
   "name": "Try More Foo",
@@ -21,22 +21,19 @@ POST http://localhost:1337/foos
 
 
 ###
-POST http://localhost:1337/bars
+POST http://localhost:8080/bars
 content-type: application/json
 
 {
-  "id" : 433,
   "name": "How about this bar?",
   "description": "Posted with Id"
 }
 
 
 ###
-PUT http://localhost:1337/foos/5ecbd5d13128f201fee268e2
+PUT http://localhost:8080/foos/5ecbd5d13128f201fee268e2
 
 {
   "name": "Updated More",
   "description": "Guess it wont work"
 }
-
-
