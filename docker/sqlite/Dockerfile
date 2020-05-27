@@ -10,7 +10,7 @@ LABEL maintainer="arnoud@kleinloog.ch" \
     vcs_url="https://github.com/akleinloog/rapid-api" \
     vcs-ref=${VCS_REF}
 
-ENV PORT=$PORT
+ENV PORT=$PORT_NR
 
 RUN apk update && apk upgrade && yarn global add strapi
 
@@ -23,6 +23,6 @@ COPY entrypoint.sh /usr/local/bin/
 
 RUN chmod 755 "/usr/local/bin/entrypoint.sh"
 
-EXPOSE 1337
+EXPOSE $PORT_NR
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]

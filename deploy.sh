@@ -2,7 +2,7 @@
 
 set -e
 
-IMAGE="akleinloog/rapid-logger"
+IMAGE="akleinloog/rapid-api"
 SEM_VER=$(git describe --abbrev=0)
 CODE_VER=$(git describe --dirty="-mod")
 GIT_COMMIT=$(git rev-parse HEAD)
@@ -11,7 +11,7 @@ echo "Building container image"
 echo "Version: " $CODE_VER
 echo "Commit: " $GIT_COMMIT
 
-docker build --force-rm --build-arg=VERSION=$CODE_VER --build-arg=VCS_REF=$GIT_COMMIT -f ./docker/sqlite/Dockerfile -t $IMAGE:$CODE_VER .
+docker build --force-rm --build-arg=VERSION=$CODE_VER --build-arg=VCS_REF=$GIT_COMMIT -f ./docker/sqlite/Dockerfile -t $IMAGE:$CODE_VER ./docker/sqlite
 
 if [ $CODE_VER == $SEM_VER ]
   then
