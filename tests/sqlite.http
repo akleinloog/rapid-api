@@ -1,39 +1,35 @@
 
 ###
-GET http://localhost:8080/foos
+GET http://localhost:8080/examples
 
 
 ###
-GET http://localhost:8080/bars
+GET http://localhost:8080/no-endpoint
 
 
 ###
-GET http://localhost:8080/foos/1
-
-
-###
-POST http://localhost:8080/foos
+POST http://localhost:8080/examples
 
 {
-  "name": "Try More Foo",
-  "description": "Muhaha"
+  "Name": "API Fail",
+  "Description": "Will create empty record due to missing content type header"
 }
 
 
 ###
-POST http://localhost:8080/bars
+POST http://localhost:8080/examples
 content-type: application/json
 
 {
-  "name": "How about this bar?",
-  "description": "Posted with Id"
+  "name": "API Example",
+  "description": "Added using API"
 }
 
 
 ###
-PUT http://localhost:8080/foos/5ecbd5d13128f201fee268e2
+PUT http://localhost:8080/examples/1
 
 {
-  "name": "Updated More",
-  "description": "Guess it wont work"
+  "name": "Updated Example",
+  "description": "Used HTTP PUT to overwrite file"
 }

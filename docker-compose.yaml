@@ -3,7 +3,5 @@ services:
   rapid-api:
     container_name: api-dev
     build: ./docker/sqlite
-    environment:
-      PORT: 8080
     ports:
       - '8080:8080'
