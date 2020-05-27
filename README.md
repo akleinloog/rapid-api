@@ -1,6 +1,14 @@
 # rapid-api
 
-An approach for rapid API prototyping for RESTful and GraphQL based APIs
+An approach for rapid API prototyping for RESTful and GraphQL based APIs.
+
+See [this post](https://www.kleinloog.ch/post/rapid-api-prototype/) for more details.
+
+The resulting container to get you going with rapid API prototyping is available on [docker hub](https://hub.docker.com/r/akleinloog/rapid-api) can be started as follows:
+
+```r
+docker run -p 8080:8080 akleinloog/rapid-api
+```
 
 ## Run locally
 
@@ -28,7 +36,6 @@ In case you want CLI access to the strapi container, you can do so using:
 ```r
 docker exec -it api-dev /bin/sh
 ```
-
 
 ## Tagging a new version
 

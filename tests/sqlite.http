@@ -21,15 +21,16 @@ POST http://localhost:8080/examples
 content-type: application/json
 
 {
-  "name": "API Example",
-  "description": "Added using API"
+  "Name": "API Example",
+  "Description": "Added using API"
 }
 
 
 ###
-PUT http://localhost:8080/examples/1
+PUT http://localhost:8080/examples/2
+content-type: application/json
 
 {
-  "name": "Updated Example",
-  "description": "Used HTTP PUT to overwrite file"
+  "Name": "Updated Example",
+  "Description": "Used HTTP PUT to overwrite file"
 }
