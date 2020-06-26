@@ -16,7 +16,8 @@ WORKDIR /app
 RUN strapi new . --quickstart --no-run && yarn install --force
 RUN strapi install documentation && strapi install graphql
 
-RUN sed -i 's/1337/8080/g' ./config/server.js
+RUN sed -i 's/1337/8080/g' ./config/server.js && \
+    sed -i 's/.tmp/data/g' ./config/database.js
 
 COPY settings.json /app/extensions/documentation/config/
 
